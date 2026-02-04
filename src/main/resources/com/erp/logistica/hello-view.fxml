@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.erp.logistica.principal.MainController"
+         prefHeight="600" prefWidth="900" tabClosingPolicy="UNAVAILABLE" style="-fx-font-family: 'Segoe UI';">
+    <tabs>
+        <Tab text="📦 Inventario">
+            <fx:include source="productos-view.fxml"/>
+        </Tab>
+
+        <Tab text="👥 Clientes">
+            <fx:include source="clientes-view.fxml"/>
+        </Tab>
+
+        <Tab text="📄 Facturación">
+            <fx:include source="facturas-view.fxml"/>
+        </Tab>
+    </tabs>
+</TabPane>

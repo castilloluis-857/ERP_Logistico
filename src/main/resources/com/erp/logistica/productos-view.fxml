@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.erp.logistica.principal.ProductoController">
+    <left>
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7; -fx-border-width: 0 1 0 0;">
+            <Label text="Gestión de Productos" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+
+            <Label text="Nombre:"/>
+            <TextField fx:id="txtNombre" promptText="Ej: Tornillo M8"/>
+
+            <Label text="Stock:"/>
+            <TextField fx:id="txtStock" promptText="Cantidad"/>
+
+            <Label text="Precio (€):"/>
+            <TextField fx:id="txtPrecio" promptText="0.00"/>
+
+            <Button text="Añadir Producto" onAction="#manejarGuardar" maxWidth="Infinity"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+
+            <Button text="Eliminar Seleccionado" onAction="#manejarEliminar" maxWidth="Infinity"
+                    style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-cursor: hand;"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <TableView fx:id="tablaProductos" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="250"/>
+                    <TableColumn fx:id="colStock" text="Stock" prefWidth="100"/>
+                    <TableColumn fx:id="colPrecio" text="Precio Unitario" prefWidth="120"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
